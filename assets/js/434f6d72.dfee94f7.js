@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[0],{5112:function(e){e.exports=JSON.parse('{"allTagsPath":"/open-platform-docs/blog/tags","slug":"/open-platform-docs/blog/tags/hello","name":"hello","count":2,"permalink":"/open-platform-docs/blog/tags/hello"}')}}]);
