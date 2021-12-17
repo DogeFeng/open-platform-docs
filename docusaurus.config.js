@@ -6,11 +6,11 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  url: "https://ekuaibao.github.io/open-platform-docs/",
+  title: "文档中心",
+  tagline: "开放平台文档中心",
+  url: "https://ekuaibao.github.io",
   baseUrl: "/open-platform-docs/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "ekuaibao", // Usually your GitHub org/user name.
@@ -26,13 +26,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/facebook/docusaurus/edit/main/website/",
+          editUrl: "https://github.com/ekuaibao/open-platform-docs/blob/main/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/main/website/blog/",
+          editUrl: "https://github.com/ekuaibao/open-platform-docs/blob/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -44,9 +43,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "community",
-        path: "community",
-        routeBasePath: "community",
+        id: "block-ui",
+        path: "block-ui",
+        routeBasePath: "block-ui",
         sidebarPath: require.resolve("./sidebarsCommunity.js"),
       },
     ],
@@ -57,7 +56,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "开放平台文档中心",
+        title: "文档中心",
         logo: {
           alt: "开放平台文档中心 Logo",
           src: "img/logo.svg",
@@ -65,15 +64,16 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "open-api/getting-started/getting-started",
+            activeBasePath: "open-api",
             position: "left",
-            label: "Open Api",
+            label: "Open API",
           },
           {
-            to: "/community/support",
+            to: "/block-ui/support",
             label: "Block UI",
             position: "left",
-            activeBaseRegex: "/community/",
+            activeBaseRegex: "/block-ui/",
           },
           { to: "/blog", label: "Blog", position: "left" },
         ],
@@ -91,19 +91,11 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "社区",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "论坛",
+                href: "https://github.com/ekuaibao/open-platform-docs/discussions",
               },
             ],
           },
@@ -116,12 +108,12 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/ekuaibao/open-platform-docs",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Open-Platform Team, Ekuaibao Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
